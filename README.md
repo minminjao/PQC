@@ -3,6 +3,25 @@
 [qubit.donghwi.dev](https://qubit.donghwi.dev)처럼 스크롤하며 단계별로 읽는 양자내성암호(PQC) 학습 사이트입니다.
 양자 컴퓨팅이 만든 위협(쇼어·그로버·HNDL)에서 시작해 PQC 원리, 전환 전략, 오해까지 4부 11페이지로 구성되며, 각 페이지에 애니메이션·시뮬레이터가 들어 있습니다.
 
+## 바로 열어 보기
+
+- **사이트 (클릭해서 사용)**: https://claude.ai/artifact/GcCYKJCV8iBfW7R9srCgtS
+- **GitHub Pages**: `main`에 머지한 뒤 저장소 Settings → Pages → Source를 "GitHub Actions"로 설정하면 https://minminjao.github.io/PQC/ 에서 열립니다.
+- **동작 예시 PDF**: [docs/PQC-site-demo.pdf](docs/PQC-site-demo.pdf) — 위젯 20종의 동작 캡처와 설명
+
+## 동작 화면
+
+| | |
+|---|---|
+| ![랜딩](docs/screenshots/01-home.png) 랜딩 페이지 — 4부 11페이지 목차 | ![쇼어](docs/screenshots/04-shor-period.png) 1-2 쇼어 주기 찾기 — 주기 r=6 → gcd로 21 = 7 × 3 |
+| ![그로버](docs/screenshots/05-grover-cost.png) 1-2 그로버 비용 — AES-128은 유효 64비트로 위험 | ![HNDL](docs/screenshots/08-hndl-warehouse.png) 1-3 HNDL — Q-Day 이후 창고의 자물쇠가 열린다 |
+| ![모스카](docs/screenshots/09-mosca.png) 1-3 모스카 부등식 — 진료기록은 이미 위험 | ![격자](docs/screenshots/11-lattice-basis.png) 2-1 격자 좋은/나쁜 기저 체험 |
+| ![KEM](docs/screenshots/12-kem-flow.png) 2-2 ML-KEM — cipher만 네트워크를 지난다 | ![서명](docs/screenshots/13-sign-verify.png) 2-3 서명/검증 — 한 글자만 바꿔도 검증 실패 |
+| ![머클](docs/screenshots/15-merkle-tree.png) 2-3 SLH-DSA 머클 트리 서명 | ![크기](docs/screenshots/16-size-comparison.png) 2-3 알고리즘 크기 비교 |
+| ![BB84](docs/screenshots/17-bb84-eve.png) 3-1 BB84 — 도청자를 켜면 QBER 상승 | ![하이브리드](docs/screenshots/19-hybrid-locks.png) 3-2 하이브리드 — 하나가 깨져도 잠긴다 |
+
+나머지 캡처는 [docs/screenshots](docs/screenshots)에 있습니다.
+
 ## 실행
 
 ```bash
@@ -44,3 +63,8 @@ npm run preview
 Vite · React 18 · TypeScript · react-router (HashRouter) · framer-motion. 3D 라이브러리 없이 SVG 애니메이션으로 구성했습니다.
 
 원본 자료: 『양자내성암호 기초』 발표자료 및 쉬운설명본 노트북 00~10 (MegazoneCloud, 2026)
+
+## 기여자
+
+- [@minminjao](https://github.com/minminjao) — 기획, 원본 자료(발표자료·쉬운설명본 노트북) 작성, 콘텐츠 검수
+- Claude Code — 사이트 구현
